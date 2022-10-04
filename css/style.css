@@ -1,4 +1,8 @@
+.header .cities__link {
+  color: crimson;
 
-.text{
-    color: rgb(46, 165, 42);
+}
+
+.header .header__navigation {
+  background-color: rgba(194, 136, 136, 0.933);
 }
