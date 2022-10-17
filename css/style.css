@@ -39,6 +39,19 @@ body {
   font-family: 'Futura PT Heavy', Arial, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .h2 {
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 1.875rem;
@@ -58,4 +71,83 @@ body {
   line-height: 120%;
   color: var(--text-color);
 
+}
+
+
+
+.btn {
+  padding: 5px 13px;
+  border: 1px solid var(--ui-color);
+  border-radius: 10px;
+  background-color: var(--ui-color);
+  font-size: 0.875rem;
+  line-height: 120%;
+  color: var(--text-color);
+  box-shadow: 3px 3px 5px rgba(244, 114, 32, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+.btn:hover {
+  background-color: transparent;
+
+}
+
+.btn:active {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.btn_transparent {
+  background-color: transparent;
+}
+
+.btn_transparent:hover {
+  background-color: var(--ui-color);
+}
+
+.header {}
+
+.service-card {
+  position: relative;
+  width: 270px;
+  height: 200px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
+
+}
+
+.service-card__title {
+  position: relative;
+  z-index: 20;
+}
+
+.service-card__price {
+  position: relative;
+  z-index: 20;
+}
+
+.service-card__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+
+.service-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%), url(ковер.png);
 }
