@@ -52,6 +52,13 @@ img {
   height: auto;
 }
 
+.list-reset {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .h2 {
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 1.875rem;
@@ -107,7 +114,143 @@ img {
   background-color: var(--ui-color);
 }
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0px, 20px;
+  margin: 0, auto;
+}
+
+
+
+
 .header {}
+
+
+
+.header__row {
+  display: flex;
+}
+
+
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+
+
+.header__social {
+  margin-left: 70px;
+}
+
+.header__cities {
+  margin-left: auto;
+}
+
+.header__contacts {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+
+}
+
+.header__contacts a {
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 1.125rem;
+  color: var(--primery-color);
+
+}
+
+.header__call {
+  margin-left: 50px;
+
+}
+
+.change-city {
+  position: relative;
+
+}
+
+.change-city__open {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+
+}
+
+.cities {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  height: 19px;
+}
+
+.social li {
+  margin-right: 20px;
+
+}
+
+.social li:last-child {
+  margin-right: 0;
+}
+
+
+.social__link svg {
+  fill: var(--text-color);
+}
+
+.social__link:hover svg {
+  fill: var(--primery-color);
+}
+
+
+
+.caret {
+  position: relative;
+  width: 6px;
+  height: 1px;
+  margin-left: 2px;
+  margin-bottom: -2px;
+}
+
+.caret::before,
+.caret::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6.6px;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.5);
+}
+
+.caret::before {
+  left: 0;
+  transform-origin: left center;
+  transform: rotate(-45deg);
+}
+
+
+.caret::after {
+  left: 0;
+  transform-origin: left center;
+  transform: rotate(-45deg);
+}
 
 .service-card {
   position: relative;
@@ -135,10 +278,6 @@ img {
   left: 50%;
   z-index: 10;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
 }
 
 
@@ -150,4 +289,58 @@ img {
   height: 100%;
   z-index: 11;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%), url(ковер.png);
+}
+
+.parent-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 600px;
+  gap: 20px;
+  row-gap: 30px;
+  column-gap: 20px;
+
+
+
+  margin: 50px 20px;
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding: 25px;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+
+}
+
+.div_1 {
+  order: 4;
+  background-color: red;
+
+}
+
+.div_2 {
+
+  background-color: chartreuse;
+  order: 3;
+}
+
+.div_3 {
+
+  background-color: blueviolet;
+  order: 1;
+}
+
+.div_4 {
+  background-color: aqua;
+  order: 1;
 }
