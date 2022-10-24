@@ -19,9 +19,13 @@
   font-family: 'Futura PT Heavy';
   src: url('../assets/fonts/FuturaPT-Heavy.woff2') format('woff2'),
     url('../assets/fonts/FuturaPT-Heavy.woff') format('woff');
-  font-weight: 900;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .h1 {
@@ -36,7 +40,7 @@ html {
 }
 
 body {
-  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-family: 'Futura PT Book', Arial, sans-serif;
 }
 
 a {
@@ -103,7 +107,6 @@ img {
 
 .btn:active {
   box-shadow: none;
-  background-color: transparent;
 }
 
 .btn_transparent {
@@ -117,8 +120,8 @@ img {
 .container {
   max-width: 1200px;
   width: 100%;
-  padding: 0px, 20px;
-  margin: 0, auto;
+  padding: 0px 20px;
+  margin: 0 auto;
 }
 
 
@@ -130,6 +133,8 @@ img {
 
 .header__row {
   display: flex;
+  align-items: center;
+  padding: 10px 0;
 }
 
 
@@ -152,7 +157,6 @@ img {
   margin-left: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   align-items: center;
   margin-left: 100px;
@@ -164,6 +168,11 @@ img {
   font-size: 1.125rem;
   color: var(--primery-color);
 
+}
+
+.header__contacts p {
+  margin: 0;
+  font-size: 0.75rem;
 }
 
 .header__call {
@@ -198,6 +207,7 @@ img {
   display: flex;
   align-items: center;
   height: 19px;
+  justify-content: space-between;
 }
 
 .social li {
@@ -222,10 +232,10 @@ img {
 
 .caret {
   position: relative;
-  width: 6px;
+  width: 6.6px;
   height: 1px;
   margin-left: 2px;
-  margin-bottom: -2px;
+  margin-top: -2px;
 }
 
 .caret::before,
@@ -233,8 +243,7 @@ img {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  width: 6.6px;
+  width: 5px;
   height: 100%;
   background-color: rgba(17, 17, 17, 0.5);
 }
@@ -242,13 +251,13 @@ img {
 .caret::before {
   left: 0;
   transform-origin: left center;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
 
 .caret::after {
   left: 0;
-  transform-origin: left center;
+  transform-origin: right center;
   transform: rotate(-45deg);
 }
 
@@ -259,7 +268,7 @@ img {
   padding: 10px 20px;
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
-
+  overflow: hidden;
 }
 
 .service-card__title {
@@ -289,58 +298,4 @@ img {
   height: 100%;
   z-index: 11;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%), url(ковер.png);
-}
-
-.parent-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  height: 600px;
-  gap: 20px;
-  row-gap: 30px;
-  column-gap: 20px;
-
-
-
-  margin: 50px 20px;
-}
-
-.div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  padding: 25px;
-  font-size: 2rem;
-  align-items: center;
-  justify-content: center;
-  order: 2;
-
-}
-
-.div_1 {
-  order: 4;
-  background-color: red;
-
-}
-
-.div_2 {
-
-  background-color: chartreuse;
-  order: 3;
-}
-
-.div_3 {
-
-  background-color: blueviolet;
-  order: 1;
-}
-
-.div_4 {
-  background-color: aqua;
-  order: 1;
 }
