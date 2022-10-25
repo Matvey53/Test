@@ -4,6 +4,7 @@
   --ui-color: #F47220;
   --bg-color: #ffffff;
   --section-color: #DAF1F9;
+  --text-color-hover: #888888;
 }
 
 @font-face {
@@ -122,6 +123,7 @@ img {
   width: 100%;
   padding: 0px 20px;
   margin: 0 auto;
+
 }
 
 
@@ -141,6 +143,7 @@ img {
 
 .header__logo {
   flex-shrink: 0;
+
 }
 
 
@@ -154,7 +157,7 @@ img {
 }
 
 .header__contacts {
-  margin-left: 100px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,6 +183,17 @@ img {
 
 }
 
+.header__navigation {
+  padding: 11px 0;
+}
+
+
+.header__divider {
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color-hover);
+}
+
 .change-city {
   position: relative;
 
@@ -200,8 +214,10 @@ img {
   left: 0;
   top: 0;
   pointer-events: none;
-
+  opacity: 0;
 }
+
+
 
 .social {
   display: flex;
@@ -261,6 +277,33 @@ img {
   transform: rotate(-45deg);
 }
 
+.nav__btn {
+  display: none;
+}
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submenu {
+  display: none;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 130%;
+  color: var(--text-color);
+}
+
+.menu__link:hover,
+.menu__link_active {
+  color: var(--text-color-hover);
+}
+
 .service-card {
   position: relative;
   width: 270px;
@@ -281,6 +324,16 @@ img {
   z-index: 20;
 }
 
+.service-card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+
 .service-card__img img {
   position: absolute;
   top: 50%;
@@ -298,4 +351,24 @@ img {
   height: 100%;
   z-index: 11;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%), url(ковер.png);
+}
+
+
+
+.section {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.first-screen {
+  padding-top: 45px;
+  background-color: var(--text-color);
+}
+
+.first-screen__title {
+  max-width: 516px;
+  width: 100%;
+  margin-top: 19px;
+  margin-bottom: 40px;
 }
