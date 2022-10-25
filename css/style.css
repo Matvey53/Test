@@ -1,11 +1,3 @@
-:root {
-  --text-color: #111111;
-  --primery-color: #007198;
-  --ui-color: #F47220;
-  --bg-color: #ffffff;
-  --section-color: #DAF1F9;
-}
-
 @font-face {
   font-family: 'Futura PT Book';
   src: url('../assets/fonts/FuturaPT-Book.woff2') format('woff2'),
@@ -24,15 +16,17 @@
   font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
+:root {
+  --text-color: #111111;
+  --text-color-hover: #888888;
+  --primary-color: #007198;
+  --ui-color: #F47220;
+  --bg-color: #ffffff;
+  --section-color: #DAF1F9;
 }
 
-.h1 {
-  font-family: 'Futura PT Heavy', Arial, sans-serif;
-  font-size: 3.125rem;
-  line-height: 120%;
-  color: var(--text-color);
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -63,7 +57,16 @@ img {
   margin: 0;
 }
 
+.h1 {
+  margin: 0;
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 3.125rem;
+  line-height: 120%;
+  color: var(--text-color);
+}
+
 .h2 {
+  margin: 0;
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 1.875rem;
   line-height: 120%;
@@ -71,6 +74,7 @@ img {
 }
 
 .h3 {
+  margin: 0;
   font-family: 'Futura PT Heavy', Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 120%;
@@ -81,28 +85,28 @@ img {
   font-size: 1.125rem;
   line-height: 120%;
   color: var(--text-color);
-
 }
 
-
+.text-primary {
+  color: var(--primary-color);
+}
 
 .btn {
+  display: inline-block;
   padding: 5px 13px;
   border: 1px solid var(--ui-color);
-  border-radius: 10px;
-  background-color: var(--ui-color);
   font-size: 0.875rem;
   line-height: 120%;
   color: var(--text-color);
+  background-color: var(--ui-color);
   box-shadow: 3px 3px 5px rgba(244, 114, 32, 0.4);
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-
 }
 
 .btn:hover {
   background-color: transparent;
-
 }
 
 .btn:active {
@@ -117,121 +121,20 @@ img {
   background-color: var(--ui-color);
 }
 
+.btn_lg {
+  padding: 13px 21px;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
-  padding: 0px 20px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
-
-
-
-.header {}
-
-
-
-.header__row {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-}
-
-
-
-.header__logo {
-  flex-shrink: 0;
-}
-
-
-
-.header__social {
-  margin-left: 70px;
-}
-
-.header__cities {
-  margin-left: auto;
-}
-
-.header__contacts {
-  margin-left: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 100px;
-
-}
-
-.header__contacts a {
-  font-family: 'Futura PT Heavy', Arial, sans-serif;
-  font-size: 1.125rem;
-  color: var(--primery-color);
-
-}
-
-.header__contacts p {
-  margin: 0;
-  font-size: 0.75rem;
-}
-
-.header__call {
-  margin-left: 50px;
-
-}
-
-.change-city {
-  position: relative;
-
-}
-
-.change-city__open {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  font-size: 0.75rem;
-  display: flex;
-  align-items: center;
-
-}
-
-.cities {
-  position: absolute;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-
-}
-
-.social {
-  display: flex;
-  align-items: center;
-  height: 19px;
-  justify-content: space-between;
-}
-
-.social li {
-  margin-right: 20px;
-
-}
-
-.social li:last-child {
-  margin-right: 0;
-}
-
-
-.social__link svg {
-  fill: var(--text-color);
-}
-
-.social__link:hover svg {
-  fill: var(--primery-color);
-}
-
-
-
 .caret {
   position: relative;
+  display: block;
   width: 6.6px;
   height: 1px;
   margin-left: 2px;
@@ -243,9 +146,10 @@ img {
   content: '';
   position: absolute;
   top: 0;
+  display: block;
   width: 5px;
   height: 100%;
-  background-color: rgba(17, 17, 17, 0.5);
+  background-color: #888888;
 }
 
 .caret::before {
@@ -254,11 +158,158 @@ img {
   transform: rotate(45deg);
 }
 
-
 .caret::after {
-  left: 0;
+  right: 0;
   transform-origin: right center;
   transform: rotate(-45deg);
+}
+
+.header {}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__cities {
+  margin-left: auto;
+}
+
+.header__social {
+  margin-left: 70px;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.header__contacts a {
+  font-family: 'Futura PT Heavy', Arial, sans-serif;
+  font-size: 1.125rem;
+  color: var(--primary-color);
+}
+
+.header__contacts p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.header__call {
+  margin-left: 50px;
+}
+
+.header__navigation {
+  padding: 11px 0;
+}
+
+.header__divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color-hover);
+}
+
+.change-city {
+  position: relative;
+}
+
+.change-city__open {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  font-size: 0.75rem;
+}
+
+.cities {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19px;
+}
+
+.social li {
+  margin-right: 20px;
+}
+
+.social li:last-child {
+  margin-right: 0;
+}
+
+.social__link svg {
+  fill: var(--text-color);
+}
+
+.social__link:hover svg {
+  fill: var(--primary-color);
+}
+
+.nav__btn {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 130%;
+  color: var(--text-color);
+}
+
+.menu__link:hover,
+.menu__link_active {
+  color: var(--text-color-hover);
+}
+
+.submenu {
+  display: none;
+}
+
+.section {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.first-screen {
+  padding-top: 45px;
+  background-color: var(--section-color);
+}
+
+.first-screen__title {
+  max-width: 516px;
+  width: 100%;
+  margin-top: 19px;
+  margin-bottom: 40px;
 }
 
 .service-card {
@@ -281,21 +332,58 @@ img {
   z-index: 20;
 }
 
+.service-card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
 .service-card__img img {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 10;
   transform: translate(-50%, -50%);
 }
-
 
 .service-card__overlay {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 11;
   width: 100%;
   height: 100%;
-  z-index: 11;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%), url(ковер.png);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 44.09%, rgba(255, 255, 255, 0.66) 93.06%);
+}
+
+.benefit-card {
+  position: relative;
+  width: 275px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--section-color);
+  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
+}
+
+.benefit-card__title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.benefit-card__icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -46px;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  transform: translateX(-50%);
+  background-color: var(--section-color);
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
 }
