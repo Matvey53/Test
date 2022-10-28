@@ -132,7 +132,22 @@ img {
   margin: 0 auto;
 }
 
-.caret {
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+
+}
+
+.col {}
+
+.first-screen__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid .caret {
   position: relative;
   display: block;
   width: 6.6px;
@@ -387,3 +402,9 @@ img {
   border-radius: 50%;
   box-shadow: 3px 3px 5px rgba(17, 17, 17, 0.25);
 }
+
+.grid-container {
+  display: grid;
+}
+
+.grid-element {}
