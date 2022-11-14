@@ -16,6 +16,7 @@
 
 <body>
 
+
   <header class="header" id="header">
     <div class="container">
       <div class="header__row">
@@ -72,7 +73,7 @@
             Мы на связи с <time datetime="09:00">9:00</time> до <time datetime="19:00">19:00</time>
           </p>
         </div>
-        <button class="header__call btn" type="button">Заказать звонок</button>
+        <button class="header__call btn" type="button" id="call-request">Заказать звонок</button>
       </div>
     </div>
     <div class="header__divider"></div>
@@ -187,55 +188,53 @@
   <main>
     <section class="first-screen section">
       <div class="container">
-        <div>
-          <div class="row">
-            <div class="col">
-              <h1 class="first-screen__title h1">Профессиональная <span class="text-primary">химчистка</span> мебели
-                и&nbsp;<span class="text-primary">клининговые услуги</span> по доступным ценам</h1>
-              <a class="first-screen__btn btn btn_lg" href="#">Рассчитать стоимость</a>
-            </div>
-            <div class="col">
-              <div class="first-screen__cards">
-                <article class="service-card">
-                  <h3 class="service-card__title h3">Химчистка мягкой мебели, диванов</h3>
-                  <p class="service-card__price">от 3 000 руб.</p>
-                  <figure class="service-card__img">
-                    <img src="assets\img\nathan-oakley-ueJ2oJeEK-U-unsplash 1.jpg"
-                      alt="Химчистка мягкой мебели, диванов">
-                  </figure>
-                </article>
-                <article class="service-card">
-                  <h3 class="service-card__title h3">Химчистка ковров, ковролинов</h3>
-                  <p class="service-card__price">от 3 000 руб.</p>
-                  <figure class="service-card__img">
-                    <div class="service-card__overlay"></div>
-                    <img src="assets\img\Rectangle 14.jpg" alt="Химчистка ковров, ковролинов">
-                  </figure>
-                </article>
-                <article class="service-card">
-                  <h3 class="service-card__title h3">Химчистка матрасов</h3>
-                  <p class="service-card__price">от 2 200 руб.</p>
-                  <figure class="service-card__img">
-                    <img src="assets\img\Rectangle 15.jpg" alt="Химчистка матрасов">
-                  </figure>
-                </article>
-                <article class="service-card">
-                  <h3 class="service-card__title h3">Химчистка штор</h3>
-                  <p class="service-card__price">от 3 200 руб.</p>
-                  <figure class="service-card__img">
-                    <img src="assets\img\Rectangle 12.jpg" alt="Химчистка штор">
-                  </figure>
-                </article>
-              </div>
+        <div class="row">
+          <div class="col">
+            <h1 class="first-screen__title h1">Профессиональная <span class="text-primary">химчистка</span> мебели
+              и&nbsp;<span class="text-primary">клининговые услуги</span> по доступным ценам</h1>
+            <a class="first-screen__btn btn btn_lg" href="#">Рассчитать стоимость</a>
+          </div>
+          <div class="col">
+            <div class="first-screen__cards">
+              <article class="service-card">
+                <h3 class="service-card__title h3">Химчистка мягкой мебели, диванов</h3>
+                <p class="service-card__price">от 3 000 руб.</p>
+                <figure class="service-card__img">
+                  <img src="assets\img\nathan-oakley-ueJ2oJeEK-U-unsplash 1.jpg" alt="Химчистка мягкой мебели, диванов">
+                </figure>
+              </article>
+              <article class="service-card">
+                <h3 class="service-card__title h3">Химчистка ковров, ковролинов</h3>
+                <p class="service-card__price">от 3 000 руб.</p>
+                <figure class="service-card__img">
+                  <div class="service-card__overlay"></div>
+                  <img src="assets\img\Rectangle 14.jpg" alt="Химчистка ковров, ковролинов">
+                </figure>
+              </article>
+              <article class="service-card">
+                <h3 class="service-card__title h3">Химчистка матрасов</h3>
+                <p class="service-card__price">от 2 200 руб.</p>
+                <figure class="service-card__img">
+                  <img src="assets\img\Rectangle 15.jpg" alt="Химчистка матрасов">
+                </figure>
+              </article>
+              <article class="service-card">
+                <h3 class="service-card__title h3">Химчистка штор</h3>
+                <p class="service-card__price">от 3 200 руб.</p>
+                <figure class="service-card__img">
+                  <img src="assets\img\Rectangle 12.jpg" alt="Химчистка штор">
+                </figure>
+              </article>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <section class="benefits section">
       <div class="container">
         <h2 class="section__title h2">Наши <span class="text-primary">преимущества</span></h2>
-        <div class="benefit__card">
+        <div class="benefits__cards">
           <article class="benefit-card">
             <h3 class="benefit-card__title h3">Лучшая химия</h3>
             <p class="benefit-card__text text">Цены у нас чуть выше, чем в среднем по рынку, поэтому можем себе
@@ -280,8 +279,7 @@
           <article class="benefit-card">
             <h3 class="benefit-card__title h3">Доступные цены</h3>
             <p class="benefit-card__text text">При этом у нас большой поток заказов, и именно поэтому, мы можем
-              удерживать цены на минимальном уровне 💪
-            </p>
+              удерживать цены на минимальном уровне 💪</p>
             <div class="benefit-card__icon">
               <svg width="44" height="29" viewBox="0 0 44 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -334,58 +332,56 @@
 
           <article class="popular-card">
             <h3 class="popular-card__title h3">Химчистка мягкой мебели</h3>
-            <figure class="popular-card__img">
+            <figure class="popular-card__image">
               <img src="assets\img\услуги 1.jpg" alt="Химчистка мягкой мебели">
             </figure>
             <p class="popular-card__price">2 100 руб.</p>
-            <a class="btn btn_transparent popular-card__more" href="#">Подробнее</a>
+            <a class="popular-card__more btn btn_transparent" href="#">Подробнее</a>
           </article>
           <article class="popular-card">
             <h3 class="popular-card__title h3">Химчистка матрасов</h3>
-            <figure class="popular-card__img">
+            <figure class="popular-card__image">
               <img src="assets\img\услуги 2.jpg" alt="Химчистка матрасов">
             </figure>
             <p class="popular-card__price">500 руб.</p>
-            <a class="btn btn_transparent popular-card__more" href="#">Подробнее</a>
+            <a class="popular-card__more btn btn_transparent" href="#">Подробнее</a>
           </article>
           <article class="popular-card">
             <h3 class="popular-card__title h3">Химчистка штор</h3>
-            <figure class="popular-card__img">
+            <figure class="popular-card__image">
               <img src="assets\img\услуги 3.jpg" alt="Химчистка штор">
             </figure>
             <p class="popular-card__price">50 руб.</p>
-            <a class="btn btn_transparent popular-card__more" href="#">Подробнее</a>
+            <a class="popular-card__more btn btn_transparent" href="#">Подробнее</a>
           </article>
           <article class="popular-card">
             <h3 class="popular-card__title h3">Химчистка ковров</h3>
-            <figure class="popular-card__img">
+            <figure class="popular-card__image">
               <img src="assets\img\услуги 4.jpg" alt="Химчистка ковров">
             </figure>
             <p class="popular-card__price">750 руб.</p>
-            <a class="btn btn_transparent popular-card__more" href="#">Подробнее</a>
+            <a class="popular-card__more btn btn_transparent" href="#">Подробнее</a>
           </article>
           <article class="popular-card">
             <h3 class="popular-card__title h3">Химчистка ковролина</h3>
-            <figure class="popular-card__img">
+            <figure class="popular-card__image">
               <img src="assets\img\услуги 5.jpg" alt="Химчистка ковролина">
             </figure>
             <p class="popular-card__price">5 000 руб.</p>
-            <a class="btn btn_transparent popular-card__more" href="#">Подробнее</a>
+            <a class="popular-card__more btn btn_transparent" href="#">Подробнее</a>
           </article>
           <article class="popular-card">
             <h3 class="popular-card__title h3">Генеральная уборка</h3>
-            <figure class="popular-card__img">
+            <figure class="popular-card__image">
               <img src="assets\img\услуги 6.jpg" alt="Генеральная уборка">
             </figure>
             <p class="popular-card__price">2 600 руб.</p>
-            <a class="btn btn_transparent popular-card__more" href="#">Подробнее</a>
+            <a class="popular-card__more btn btn_transparent" href="#">Подробнее</a>
           </article>
         </div>
       </div>
     </section>
   </main>
-
-
 
   <footer>
     <a href="/">
@@ -468,32 +464,49 @@
     <address>Москва, Мартеновская, 24-23</address>
   </footer>
 
-  <div class="dialog">
-    <div class="dialog__overlay"></div>
+  <div class="dialog" id="call-request-dialog">
+    <div class="dialog__overlay" id="call-request-overlay"></div>
     <div class="dialog__content">
-      <button class="dialog__close ">
+      <button class="dialog__close" id="call-request-close">
         <span></span>
       </button>
+
       <h3 class="dialog__title h3">Обратный звонок</h3>
+
       <form class="form" action="">
         <fieldset class="form__group">
           <legend class="form__legend">Имя</legend>
           <input class="form__input" type="text" name="name" placeholder="Имя">
         </fieldset>
-
         <fieldset class="form__group">
           <legend class="form__legend">Телефон</legend>
           <input class="form__input" type="tel" name="phone" placeholder="Телефон">
         </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__legend">Test</legend>
+          <div class="form__radio">
+            <input type="radio" name="fruits" value="Яблоко" id="apple">
+            <label for="apple">Яблоко</label>
+          </div>
+
+          <div class="form__radio">
+            <input type="radio" name="fruits" value="Яблоко2" id="apple2" checked>
+            <label for="apple2">Яблоко2</label>
+          </div>
+
+          <div class="form__checkbox">
+            <input type="checkbox" name="fruits2" value="Ананас" id="pineapple">
+            <label for="pineapple">Ананас</label>
+          </div>
+        </fieldset>
         <button class="form__submit btn" type="submit">Отправить</button>
-        <p class="form__caption">Нажимая на кнопку, вы подтверждаете, что ознакомились с политикой конфиденциальности
-          и
+        <p class="form__caption">Нажимая на кнопку, вы подтверждаете, что ознакомились с политикой конфиденциальности и
           даете согласие на обработку своих персональных данных</p>
       </form>
-
     </div>
   </div>
 
+  <script src="/js/main.js"></script>
 </body>
 
 </html>
